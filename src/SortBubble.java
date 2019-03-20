@@ -1,8 +1,10 @@
 import java.util.Arrays;
 
-public class SortBabl {
+public class SortBubble {
     public static void main(String[] args) {
-        int[] list = {3, 5, 10, 2, 33, 30, 1};
+        System.out.println(sortBubble(new int[] {3, 5, 10, 2, 33, 30, 1}));
+        }
+    public static int sortBubble(int[] list){
         for (int i = 0; i < list.length; i++) {
             for (int j = list.length - 1; j > i; j--) {
                 if (list[j] < list[j - 1]) {
@@ -11,9 +13,6 @@ public class SortBabl {
                     list[j - 1] = x;
                 }
             }
-        }
-        for (int number : list) {
-            System.out.println(number);
         }
     }
 }

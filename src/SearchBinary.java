@@ -1,12 +1,12 @@
 import java.util.Scanner;
 import java.util.Arrays;
 
-public class SortBinary {
+public class SearchBinary {
     public static void main(String[] args) {
-        System.out.println(poiskBinary(new int[]{1, 3, 4, 6, 19, 21, 30, 44}, 4));
+        System.out.println(searchBinary(new int[]{1, 3, 4, 6, 19, 21, 30, 44}, 4));
     }
 
-    public static int poiskBinary(int[] x, int findX) {
+    public static int searchBinary(int[] x, int findX) {
         int low = 0;
         int high = x.length - 1;
 
