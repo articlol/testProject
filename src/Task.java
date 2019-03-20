@@ -8,7 +8,6 @@ public class Task {
             Element e3 = new Element("Bless", e4);
             Element e2 = new Element("God", e3);
             Element e1 = new Element("May", e2);
-
             //Must print "Bless"
             System.out.println(findMiddleElement(e1).getValue());
         }
@@ -16,19 +15,12 @@ public class Task {
         private static Element findMiddleElement(Element head) {
             Element fast = head;
             Element slow = head;
-            int meter = 0;
-            while(fast.getNext() != null) {
-                fast = fast.getNext();
-                meter++;
-                if (meter % 2 == 0) {
-                    slow = slow.getNext();
-
+            while(fast != null && fast.getNext() != null) {
+                fast = fast.getNext().getNext();
+                slow = slow.getNext();
                 }
-            }
-
-            return slow;
+                return slow;
         }
-
         static class Element {
 
             private final String value;

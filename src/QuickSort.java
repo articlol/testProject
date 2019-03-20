@@ -25,24 +25,18 @@ public class QuickSort {
                 j--;
             }
         }
-
         if (low < j)
             quickSort(array, low, j);
 
         if (high > i)
             quickSort(array, i, high);
     }
-
     public static void main(String[] args) {
         int[] x = {8, 0, 4, 7, 3, 7, 10, 12, -3};
-        System.out.println("Было");
-        System.out.println(Arrays.toString(x));
-
         int low = 0;
         int high = x.length - 1;
-
         quickSort(x, low, high);
-        System.out.println("Стало");
         System.out.println(Arrays.toString(x));
+
     }
 }
