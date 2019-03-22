@@ -10,9 +10,11 @@ final class A {
         this.d = d;
     }
     public int getI() {
+
         return this.i;
     }
     public Date getD() {
-        return this.d;
+
+        return new Date(this.d.getTime());
     }
 }
