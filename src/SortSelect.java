@@ -1,9 +1,10 @@
 public class SortSelect {
     public static void main(String[] args) {
-        System.out.println(sortSelect(new int[] {40, 30, 2, 14, 5, 16, 2, 46, 17, 87, 29, 43, 11, 1}));
+        System.out.println(sortSelect(new int[]{40, 30, 2, 14, 5, 16, 2, 46, 17, 87, 29, 43, 11, 1}));
 
     }
-    public static int sortSelect(int[] list){
+
+    public static int sortSelect(int[] list) {
         for (int i = 0; i < list.length; i++) {
             int min = list[i];
             int i_min = i;
@@ -20,5 +21,8 @@ public class SortSelect {
             }
             System.out.println(list[i]);
         }
+
     }
 }
+
+
