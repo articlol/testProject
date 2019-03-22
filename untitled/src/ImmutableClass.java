@@ -1,11 +1,11 @@
 import java.util.Date;
 
 
-final class A {
+final class ImmutableClass {
     private final int i;
     private final Date d;
 
-    public A(int i, Date d) {
+    public ImmutableClass(int i, Date d) {
         this.i = i;
         this.d = (d == null) ? null : new Date(d.getTime());
     }
@@ -22,9 +22,9 @@ final class A {
 
     public static void main(String[] args) {
         Date d = new Date();
-        A a = new A(3,d);
+        ImmutableClass immutableClass = new ImmutableClass(3,d);
         d.setTime(0);
-        System.out.println(a.getD());
+        System.out.println(immutableClass.getD());
     }
 
 }
