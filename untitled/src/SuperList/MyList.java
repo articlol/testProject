@@ -23,7 +23,7 @@ public class MyList<T> extends AbstractList<T> {
             first = newNode;
             middle = newNode;
             last = newNode;
-        } else { // иначе в конец добавлякм новую ноду и меняем ссылки
+        } else {                                      // иначе в конец добавлякм новую ноду и меняем ссылки
             last.next = newNode;
             newNode.previous = last;
             last = newNode;
@@ -41,20 +41,20 @@ public class MyList<T> extends AbstractList<T> {
     public void addMid(T element) {
         Node<T> newMiddle = new Node<>(element);
         if (middle != null) {
-            if (size % 2 == 0) { //если чётное, то добавляем вправо от старой середины
+            if (size % 2 == 0) {                      //если чётное, то добавляем вправо от старой середины
                 newMiddle.previous = middle;
                 newMiddle.next = middle.next;
-                if (middle.next != null) { // если следующий элемент существует, то
+                if (middle.next != null) {            // если следующий элемент существует, то
                     middle.next.previous = newMiddle;
                 }
                 middle.next = newMiddle;
                 middle = newMiddle;
-            } else { //если нечётное, то добавляем влево
+            } else {                                 //если нечётное, то добавляем влево
                 newMiddle.next = middle;
                 newMiddle.previous = middle.previous;
-                if (middle.previous != null) { // если предыдущий элемент существует, то
+                if (middle.previous != null) {       // если предыдущий элемент существует, то
                     middle.previous.next = newMiddle;
-                } else { // иначе если не существует, то это и есть первый
+                } else {                             // иначе если не существует, то это и есть первый
                     first = newMiddle;
                 }
                 middle.previous = newMiddle;
@@ -71,7 +71,7 @@ public class MyList<T> extends AbstractList<T> {
         return node.value;
     }
 
-    Node<T> getNode(int index) { // начинаем с first, дальше итерируемся через next
+    Node<T> getNode(int index) {                      // начинаем с first, дальше итерируемся через next
         if (index == 0) {
             return first;
         }
