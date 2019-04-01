@@ -1,5 +1,6 @@
 import java.util.Arrays;
 import java.util.List;
+import java.util.Objects;
 
 public class Car {
     private String number;
@@ -37,10 +38,12 @@ public class Car {
         */
         cars.stream()                     //    -------  использование steam api
                 .filter(y -> y.getYear() > 2010)
-                .map(Car::getNumber).filter(x -> x != null && !x.isEmpty())
+                .map(Car::getNumber)
+                .filter(Objects::nonNull)
+                .filter(x -> !x.isEmpty())
                 .forEach(System.out::println);
 
 
-        }
     }
+}
 
