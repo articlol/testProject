@@ -9,6 +9,6 @@ enum MySweetSingletonEnum{
 }
 public class SingletonEnumPattnern {
     public static void main(String[] args) {
-        System.out.println(MySweetSingleton.INSTANCE);
+        System.out.println(MySweetSingletonEnum.INSTANCE);
     }
 }
